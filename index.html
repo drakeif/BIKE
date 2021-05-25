@@ -5,15 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YEBO Bicycle</title>
+    <link rel="shortcut icon" href="./img/pic-1.png" type="image/png">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 </head>
 <body id="body">
+    <!-- HEADER -->
     <header class="header">
         <div class="container">
             <div class="header__inner">
                 <ul>
-                    <li><a href="#!">about us</a></li>
-                    <li><a href="#!">work</a></li>
+                    <li><a href="#about">about us</a></li>
+                    <li><a href="#work">work</a></li>
                 </ul>
 
                 <div class="header__logo">
@@ -47,7 +50,7 @@
     </section>
 
     <!-- GRID BIKE -->
-    <div class="grid">
+    <div class="grid" id="about">
         <div class="grid__block grid__block--1">
             <img src="./img/pic-2.png" alt="pic-2">
         </div>
@@ -87,12 +90,70 @@
         <div class="grid__block grid__block--10"></div>
     </div>
 
+    <!-- TESTIMPNIALS -->
+    <div class="testimonials" id="work">
+        <div class="container">
+            <!-- Swiper -->
+            <div class="swiper-container mySwiper">
+                <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="testimonials__block">
+                        <img src="./img/twitter.svg" alt="twitter">
+                        <div class="testimonials__block-title">
+                            <h3>AOD New-York @aod</h3>
+                            <span>/ 35 min</span>
+                        </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut tellus ac nulla semper rhoncus. Nullam a odio porttitor, dictum turpis vitae, pretium ante amet.
+                    </p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="testimonials__block">
+                        <img src="./img/telegram.svg" alt="twitter">
+                        <div class="testimonials__block-title">
+                            <h3>VOK Stanislawiw @vok</h3>
+                            <span>/ 49 min</span>
+                        </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut tellus ac nulla semper rhoncus. Nullam a odio porttitor, dictum turpis vitae, pretium ante amet.
+                    </p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="testimonials__block">
+                        <img src="./img/instagram.svg" alt="twitter">
+                        <div class="testimonials__block-title">
+                            <h3>ALY Lwiw @aly</h3>
+                            <span>/ 16 min</span>
+                        </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut tellus ac nulla semper rhoncus. Nullam a odio porttitor, dictum turpis vitae, pretium ante amet.
+                    </p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="testimonials__block">
+                        <img src="./img/facebook.svg" alt="twitter">
+                        <div class="testimonials__block-title">
+                            <h3>LAN Los-Angeles @lan</h3>
+                            <span>/ 51 min</span>
+                        </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut tellus ac nulla semper rhoncus. Nullam a odio porttitor, dictum turpis vitae, pretium ante amet.
+                    </p>
+                    </div>
+                </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </div>
+
+     
+
     <!-- MODAL MENU -->
     <div class="menu">
         <div class="menu__wrapper">
             <nav class="menu__nav">
-                <a href="#!">about us</a>
-                <a href="#!">work</a>
+                <a href="#about">about us</a>
+                <a href="#work">work</a>
                 <a href="#!">shop</a>
                 <a href="#!">contact</a>
             </nav>
@@ -103,6 +164,8 @@
         </div>
     </div>
 
+    <!-- SCRIPTS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="js/app.js"></script>
 </body>
 </html>

@@ -206,6 +206,9 @@ img {
             @include media(768) {
                 margin-bottom: 15px;
             }
+            @include media(600) {
+                margin-bottom: 7px;
+            }
         }
         h1 {
             font-size: 24px;
@@ -214,6 +217,10 @@ img {
             @include media(768) {
                 font-size: 18px;
                 letter-spacing: 2px;
+            }
+            @include media(600) {
+                font-size: 14px;
+                letter-spacing: 1px;
             }
         }
         p {
@@ -225,16 +232,26 @@ img {
                 font-size: 14px;
                 line-height: 1.5;
             }
+            @include media(600) {
+                font-size: 12px;
+                line-height: 1.2;
+            }
         }
     }
 }
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(9, 200px);
+    @include media(768) {
+        grid-template-rows: repeat(8, 200px);
+    }
+    @include media(600) {
+        grid-template-rows: repeat(9, 200px);
+    }
     &__block {
-        padding: 50px;
+        padding: 0 25px;
         display: grid;
         place-content: center;
         background-position: center;
@@ -257,41 +274,209 @@ img {
         p {
             text-align: justify;
         }
+        .bike__title {
+            padding: 0;
+        }
         &--1 {
-            grid-column: span 2;
+            grid-column: span 4;
             grid-row: span 3;
             background-image: url('../img/grid-1.jpg');
+            @include media(768) {
+                grid-column: span 6;
+                grid-row: span 1;
+            }
         }
         &--2 {
+            grid-column: span 2;
             grid-row: span 2;
+            @include media(768) {
+                grid-column: span 4;
+                grid-row: span 1;
+                img {
+                    max-width: 30px;
+                }
+                h2 {
+                    font-size: 14px;
+                }
+                p {
+                    font-size: 12px;
+                }
+            }
+            @include media(600) {
+                grid-column: span 6;
+                grid-row: span 1;
+                img {
+                    margin-bottom: 7px;
+                }
+                h2 {
+                    margin-bottom: 7px;
+                }
+            }
         }
         &--3 {
+            grid-column: span 2;
             background-image: url('../img/grid-2.jpg');
+            @include media(768) {
+                grid-column: span 2;
+                grid-row: span 1;
+            }
+            @include media(600) {
+                grid-column: span 6;
+                grid-row: span 1;
+            }
         }
         &--4 {
+            grid-column: span 2;
             grid-row: span 2;
+            @include media(768) {
+                img {
+                    max-width: 30px;
+                }
+                h2 {
+                    font-size: 14px;
+                }
+                p {
+                    font-size: 12px;
+                }
+            }
+            @include media(600) {
+                grid-column: span 6;
+                grid-row: span 1;
+                img {
+                    margin-bottom: 7px;
+                }
+                h2 {
+                    margin-bottom: 7px;
+                }
+            }
         }
         &--5 {
-            grid-column: span 2;
+            grid-column: span 4;
             grid-row: span 3;
             background-image: url('../img/grid-3.jpg');
+            @include media(768) {
+                grid-row: span 2;
+            } 
+            @include media(600) {
+                grid-column: span 6;
+                grid-row: span 1;
+            }     
         }
         &--6 {
+            grid-column: span 2;
             background-image: url('../img/grid-4.jpg');
+            @include media(768) {
+               grid-column: span 6;
+            }
+            @include media(600) {
+                grid-column: span 3;
+            }
         }
         &--7 {
+            grid-column: span 2;
             grid-row: span 3;
             background-image: url('../img/grid-5.jpg');
+            @include media(600) {
+                grid-column: span 3;
+                grid-row: span 1;
+            }
         }
         &--8 {
+            grid-column: span 2;
             grid-row: span 2;
+            @include media(768) {
+                img {
+                    max-width: 30px;
+                }
+                h2 {
+                    font-size: 14px;
+                }
+                p {
+                    font-size: 12px;
+                }
+            }
+            @include media(600) {
+                grid-column: span 3;
+                grid-row: span 2;
+                img {
+                    margin-bottom: 7px;
+                }
+                h2 {
+                    margin-bottom: 7px;
+                }
+            }
         }
         &--9 {
+            grid-column: span 2;
             grid-row: span 3;
             background-image: url('../img/grid-6.jpg');
+            @include media(600) {
+                grid-column: span 3;
+                grid-row: span 2;
+            }
         }
         &--10 {
+            grid-column: span 2;
             background-image: url('../img/grid-7.jpg');
+            @include media(600) {
+                grid-column: span 6;
+                grid-row: span 1;
+            }
+        }
+    }
+}
+
+// TESTIMONIALS
+.testimonials {
+    padding: 100px 0;
+    @include media(768) {
+        padding: 50px 0;
+    }
+    @include media(600) {
+        padding: 25px 0;
+    }
+    &__block {
+        text-align: center;
+        min-height: 250px;
+        @include media(600) {
+            min-height: 200px;
+        }
+        img {
+            max-width: 40px;
+            margin-bottom: 40px;
+            @include media(600) {
+                max-width: 30px;
+                margin-bottom: 20px;
+            }
+        }
+        &-title {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            column-gap: 10px;
+            margin-bottom: 30px;
+            white-space: nowrap;
+            h3 {
+                font-size: 20px;
+                @include media(600) {
+                    font-size: 18px;
+                }
+            }
+            span {
+                font-size: 18px;
+                color: #848789;
+            }
+            @include media(600) {
+                margin-bottom: 15px;
+            }
+        }
+        p {
+            font-size: 24px;
+            font-style: italic;
+            color: #848789;
+            @include media(600) {
+                font-size: 16px;
+            }
         }
     }
 }
