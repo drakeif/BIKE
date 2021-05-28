@@ -49,6 +49,75 @@ img {
     height: auto;
     vertical-align: middle;
 }
+
+// MODAL MENU
+.menu {
+    z-index: 10;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    &__wrapper {
+        nav {
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            row-gap: 25px;
+            a {
+                font-size: 28px;
+                color: #4d4959;
+                text-decoration: none;
+                text-transform: uppercase;
+                font-weight: 700;
+                transition: .15s linear;
+                &:hover {
+                    color: #64c29e;
+                }
+            }
+        }   
+    }
+    &__close {
+        display: block;
+        position: absolute;
+        top: 5%;
+        right: 5%;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        span {
+            display: block;
+            position: absolute;
+            pointer-events: none;
+            background: #64c29e;
+            width: 100%;
+            height: 1px;
+            transition: .15s linear;
+            &:nth-child(1) {
+                top: 50%;
+                transform: rotate(45deg);
+            }
+            &:nth-child(2) {
+                top: 50%;
+                transform: rotate(-45deg);
+            }
+        }
+        &:hover span {
+            background: #5294eb;
+        }
+    }
+    &.active {
+        display: flex;
+    }
+}
+
+// HEADER
 .header {
     width: 100%;
     height: 100vh;
@@ -135,73 +204,7 @@ img {
     }
 }
 
-// MODAL MENU
-.menu {
-    z-index: 10;
-    display: none;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #fff;
-    &__wrapper {
-        nav {
-            display: flex;
-            flex-flow: column;
-            align-items: center;
-            row-gap: 25px;
-            a {
-                font-size: 28px;
-                color: #4d4959;
-                text-decoration: none;
-                text-transform: uppercase;
-                font-weight: 700;
-                transition: .15s linear;
-                &:hover {
-                    color: #64c29e;
-                }
-            }
-        }   
-    }
-    &__close {
-        display: block;
-        position: absolute;
-        top: 5%;
-        right: 5%;
-        width: 40px;
-        height: 40px;
-        cursor: pointer;
-        span {
-            display: block;
-            position: absolute;
-            pointer-events: none;
-            background: #64c29e;
-            width: 100%;
-            height: 1px;
-            transition: .15s linear;
-            &:nth-child(1) {
-                top: 50%;
-                transform: rotate(45deg);
-            }
-            &:nth-child(2) {
-                top: 50%;
-                transform: rotate(-45deg);
-            }
-        }
-        &:hover span {
-            background: #5294eb;
-        }
-    }
-    &.active {
-        display: flex;
-    }
-}
-
+// BIKE
 .bike {
     background: #f7f7f7;
     &__title {
