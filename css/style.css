@@ -672,7 +672,13 @@ img {
       outline: none;
       color: #fff;
       padding-left: 30px;
-      padding-right: 30px; }
+      padding-right: 30px;
+      cursor: pointer;
+      -webkit-transition: .2s linear;
+      transition: .2s linear; }
+      .enter__input form input:nth-child(2):hover {
+        background: transparent;
+        color: #64c29e; }
       @media only screen and (max-width: 600px) {
         .enter__input form input:nth-child(2) {
           width: 100%; } }
@@ -724,8 +730,20 @@ img {
       color: #64c29e; }
       .footer__address a:hover {
         text-decoration: underline; }
-  .footer__social img:not(:last-child) {
-    margin-right: 10px; }
+  .footer__social {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-column-gap: 10px;
+            column-gap: 10px; }
+    .footer__social a {
+      display: inline-block; }
+      .footer__social a img {
+        -webkit-transition: .1s linear;
+        transition: .1s linear; }
+      .footer__social a:hover img {
+        -webkit-filter: drop-shadow(0 3px 3px #64c29e);
+                filter: drop-shadow(0 3px 3px #64c29e); }
   .footer__made {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;

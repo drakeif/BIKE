@@ -727,6 +727,12 @@ img {
                     color: #fff;
                     padding-left: 30px;
                     padding-right: 30px;
+                    cursor: pointer;
+                    transition: .2s linear;
+                    &:hover {
+                        background: transparent;
+                        color: #64c29e;
+                    }
                     @include media(600) {
                         width: 100%;
                     }
@@ -780,8 +786,16 @@ img {
         }
     }
     &__social {
-        img:not(:last-child) {
-            margin-right: 10px;
+        display: flex;
+        column-gap: 10px;
+        a {
+            display: inline-block;
+            img {
+                transition: .1s linear;
+            }
+            &:hover img {
+               filter: drop-shadow(0 3px 3px rgba(100, 194,	158, 1));
+            }
         }
     }
     &__made {
