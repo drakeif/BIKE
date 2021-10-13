@@ -496,8 +496,11 @@ img {
         }
     }
 }
-// SECOND GRID BIKE
+.mySwiper {
+    overflow: hidden;
+}
 
+// SECOND GRID BIKE
 .secondGrid {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
